@@ -1,10 +1,15 @@
+import { Routes, Route  } from "react-router-dom"
 
 function App() {
 
   return (
     <>
-      <div className="bg-black text-white font-mono">
-        <p className="text-xl">hello react</p>
+      <h1>Hello React Router!</h1>
+
+      <div className="main">
+        <Routes>
+          <Route path="/" element={<Home/>} />
+        </Routes>
       </div>
     </>
   )
