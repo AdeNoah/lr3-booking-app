@@ -32,10 +32,13 @@ const Header = () => {
   });
 
   const handleOption = (name, operation) => {
-    setOptions(prev => {return{
-      ...prev, [name]:operation ==='i' ? options[name] + 1 : options[name] - 1
-    }})
-  }
+    setOptions((prev) => {
+      return {
+        ...prev,
+        [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
+      };
+    });
+  };
 
   return (
     <>
@@ -113,18 +116,20 @@ const Header = () => {
 
             <div className="header-search-item relative">
               <FontAwesomeIcon icon={faPerson} className="header-icon" />
-              <span className="header-search-text cursor-pointer">{`${options.adult} adult · ${options.children} children · ${options.room} room`}</span>
-              <div className="options absolute top-[45px] bg-white rounded-[5px] p-4 [box-shadow:5px_5px_10px_-5px_rgba(0,0,0,0.3)] [&>div]:flex [&>div]:justify-between [&>div]:items-center [&>div>div]:flex [&>div]:gap-4 [&>div>div]:gap-4 [&>div>div]:py-1  [&>div>div>button]:border [&>div>div>button]:px-2">
+              <span onClick={() => SetOpenOptions(!openOptions)} className="header-search-text cursor-pointer">{`${options.adult} adult · ${options.children} children · ${options.room} room`}</span>
+
+              {openOptions && <div className="options absolute top-[45px] bg-white rounded-[5px] p-4 [box-shadow:5px_5px_10px_-5px_rgba(0,0,0,0.3)] [&>div]:flex [&>div]:justify-between [&>div]:items-center [&>div>div]:flex [&>div]:gap-4 [&>div>div]:gap-4 [&>div>div]:py-1  [&>div>div>button]:border [&>div>div>button]:px-2">
                 <div className="option-item">
                   <span className="option-text">Adult</span>
                   <div className="counter">
                     <button
+                      disabled={options.adult <= 1}
                       className="option-counter-btn"
                       onClick={() => handleOption("adult", "d")}
                     >
                       -
                     </button>
-                    <span className="option-counter-num">1</span>
+                    <span className="option-counter-num">{options.adult}</span>
                     <button
                       className="option-counter-btn"
                       onClick={() => handleOption("adult", "i")}
@@ -138,12 +143,15 @@ const Header = () => {
                   <span className="option-text">Children</span>
                   <div className="counter">
                     <button
+                      disabled={options.children <= 0}
                       className="option-counter-btn"
                       onClick={() => handleOption("children", "d")}
                     >
                       -
                     </button>
-                    <span className="option-counter-num">0</span>
+                    <span className="option-counter-num">
+                      {options.children}
+                    </span>
                     <button
                       className="option-counter-btn"
                       onClick={() => handleOption("children", "i")}
@@ -157,12 +165,13 @@ const Header = () => {
                   <span className="option-text">Rooms</span>
                   <div className="counter">
                     <button
+                      disabled={options.room <= 1}
                       className="option-counter-btn"
                       onClick={() => handleOption("room", "d")}
                     >
                       -
                     </button>
-                    <span className="option-counter-num">1</span>
+                    <span className="option-counter-num">{options.room}</span>
                     <button
                       className="option-counter-btn"
                       onClick={() => handleOption("room", "i")}
@@ -171,7 +180,7 @@ const Header = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </div>}
             </div>
 
             <div className="header-search-item ">
