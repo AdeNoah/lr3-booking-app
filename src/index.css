@@ -10,7 +10,7 @@
     --color-nav-bg: #003580;
 }
 
-/* these ones are for the header component */
+/* these ones are for the header component with the home page */
 .header-list-item.active {
     border: 1px solid white;
     padding: 10px;
