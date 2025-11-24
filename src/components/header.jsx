@@ -43,7 +43,13 @@ const Header = ({ type }) => {
   return (
     <>
       <div className="header bg-nav-bg text-white flex justify-center ">
-        <div className={type === "list" ? "w-full max-w-[1024px] mx-0 mt-[20px] mb-[0px] relative" : "header-container w-full max-w-[1024px] mx-0 mt-[20px] mb-[100px] relative"} >
+        <div
+          className={
+            type === "list"
+              ? "w-full max-w-[1024px] mx-0 mt-[20px] mb-[0px] relative"
+              : "header-container w-full max-w-[1024px] mx-0 mt-[20px] mb-[100px] relative"
+          }
+        >
           <div className="header-list flex gap-[40px] mb-[50px]">
             <div className="header-list-item flex items-center gap-[10px]">
               <FontAwesomeIcon icon={faBed} />
@@ -71,7 +77,7 @@ const Header = ({ type }) => {
             </div>
           </div>
 
-          {type !== "list" &&
+          {type !== "list" && (
             <>
               <h1 className="header-title text-4xl font-bold">
                 A lifetime of discounts? It's Genius.
@@ -84,7 +90,10 @@ const Header = ({ type }) => {
                 Sign In/Register
               </button>
 
-              <div className="header-search w-full max-w-[1024px] h-[30px] bg-white border-[3px] border-yellow-500 outline-none flex items-center justify-around text-gray-400 '' py-[30px] px-[0] rounded-[5px] absolute bottom-[-130px] *:flex *:items-center *:gap-[10px]">
+              <div
+                className="header-search w-full max-w-[1024px] h-[30px] bg-white border-[3px] border-yellow-500 outline-none flex items-center justify-around text-gray-400 py-[30px] px-[0] rounded-[5px] absolute bottom-[-130px] 
+              *:flex *:items-center *:gap-[10px]"
+              >
                 <div className="header-search-item ">
                   <FontAwesomeIcon icon={faHotel} className="header-icon" />
                   <input
@@ -127,7 +136,12 @@ const Header = ({ type }) => {
                   >{`${options.adult} adult · ${options.children} children · ${options.room} room`}</span>
 
                   {openOptions && (
-                    <div className="options absolute top-[45px] bg-white rounded-[5px] p-4 [box-shadow:5px_5px_10px_-5px_rgba(0,0,0,0.3)] [&>div]:flex [&>div]:justify-between [&>div]:items-center [&>div>div]:flex [&>div]:gap-4 [&>div>div]:gap-4 [&>div>div]:py-1  [&>div>div>button]:border [&>div>div>button]:px-2">
+                    <div
+                      className="options absolute top-[45px] bg-white rounded-[5px] p-4 [box-shadow:5px_5px_10px_-5px_rgba(0,0,0,0.3)] 
+                    [&>div]:flex [&>div]:justify-between [&>div]:items-center [&>div]:gap-4
+                    [&>div>div]:flex [&>div>div]:gap-4 [&>div>div]:py-1 
+                    [&>div>div>button]:border [&>div>div>button]:px-2"
+                    >
                       <div className="option-item">
                         <span className="option-text">Adult</span>
                         <div className="counter">
@@ -204,7 +218,7 @@ const Header = ({ type }) => {
                 </div>
               </div>
             </>
-          }
+          )}
         </div>
       </div>
     </>
