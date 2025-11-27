@@ -4,8 +4,7 @@ const PropertyList = () => {
       <div
         className="p-list w-full max-w-[1024px] flex justify-between gap-[20px]
       [&>div]:rounded-[10px] [&>div]:overflow-hidden [&>div]:cursor-pointer
-      [&>div>img]:w-full [&>div>img]:h-[150px] [&>div>img]:object-cover
-      [&>div>div]:"
+      [&>div>img]:w-full [&>div>img]:h-[150px] [&>div>img]:object-cover"
       >
         <div className="p-list-item">
           <img
@@ -14,8 +13,8 @@ const PropertyList = () => {
             className="p-list-img"
           />
           <div className="p-list-titles">
-            <h2>Hotels</h2>
-            <h3>213 hotels</h3>
+            <h4>Hotels</h4>
+            <h6>213 hotels</h6>
           </div>
         </div>
 
@@ -26,8 +25,8 @@ const PropertyList = () => {
             className="p-list-img"
           />
           <div className="p-list-titles">
-            <h2>Apartments</h2>
-            <h3>214 apaerments</h3>
+            <h4>Apartments</h4>
+            <h6>214 apaerments</h6>
           </div>
         </div>
 
@@ -38,8 +37,8 @@ const PropertyList = () => {
             className="p-list-img"
           />
           <div className="p-list-titles">
-            <h2>Resorts</h2>
-            <h3>215 resorts</h3>
+            <h4>Resorts</h4>
+            <h6>215 resorts</h6>
           </div>
         </div>
 
@@ -50,8 +49,8 @@ const PropertyList = () => {
             className="p-list-img"
           />
           <div className="p-list-titles">
-            <h2>Villas</h2>
-            <h3>216 villas</h3>
+            <h4>Villas</h4>
+            <h6>216 villas</h6>
           </div>
         </div>
 
@@ -62,8 +61,8 @@ const PropertyList = () => {
             className="p-list-img"
           />
           <div className="p-list-titles">
-            <h2>Cabins</h2>
-            <h3>217 cabins</h3>
+            <h4>Cabins</h4>
+            <h6>217 cabins</h6>
           </div>
         </div>
       </div>

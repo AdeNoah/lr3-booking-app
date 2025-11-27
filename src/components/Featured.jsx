@@ -2,7 +2,7 @@ const Featured = () => {
   return (
     <>
       <div
-        className="featured w-full max-w-[1024px] flex justify-evenly gap-[0px] 
+        className="featured w-full max-w-[1024px] flex justify-between gap-[auto  ] 
        [&>div]:rounded-[10px] [&>div]:overflow-hidden 
        [&>div>img]:w-full [&>div>img]:object-cover [&>div>img]:h-[300px]
        [&>div>div]:px-[10px] [&>div>div]:py-[5px]"
@@ -14,8 +14,8 @@ const Featured = () => {
             className="featured-image "
           />
           <div className="featured-titles">
-            <h2>Burundi</h2>
-            <h3>123 properties</h3>
+            <h3>Burundi</h3>
+            <h5>123 properties</h5>
           </div>
         </div>
 
@@ -26,8 +26,8 @@ const Featured = () => {
             className="featured-image "
           />
           <div className="featured-titles">
-            <h2>Egypt</h2>
-            <h3>124 properties</h3>
+            <h3>Egypt</h3>
+            <h5>124 properties</h5>
           </div>
         </div>
 
@@ -38,8 +38,8 @@ const Featured = () => {
             className="featured-image "
           />
           <div className="featured-titles">
-            <h2>Morocco</h2>
-            <h3>125 properties</h3>
+            <h3>Morocco</h3>
+            <h5>125 properties</h5>
           </div>
         </div>
       </div>
