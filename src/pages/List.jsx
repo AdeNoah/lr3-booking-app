@@ -1,6 +1,6 @@
 import { useState } from "react";
 import NavBar from "../components/NavBar";
-import Header from "../components/header";
+import Header from "../components/Header";
 import { useLocation } from "react-router-dom";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
@@ -106,6 +106,14 @@ const List = () => {
 
           {/* the search results card thing */}
           <div className="list-results flex-3 w-full">
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
             <SearchItem />
             <SearchItem />
             <SearchItem />
