@@ -71,7 +71,7 @@ const Header = ({ type }) => {
 
             <div className="header-list-item flex items-center gap-[10px]">
               <FontAwesomeIcon icon={faCar} />
-              <span>Car Rentsls</span>
+              <span>Car Rentals</span>
             </div>
 
             <div className="header-list-item flex items-center gap-[10px]">

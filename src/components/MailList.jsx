@@ -4,7 +4,7 @@ const MailList = () => {
       <div className="mail w-full max-w-[1024px] bg-[#003580] text-white flex flex-col justify-center items-center gap-[15px] p-[50px]">
         <h2 className="mail-title">Save time, save money</h2>
         <span className="mail-description">
-          Sign-up and we'd send the best deals to you{" "}
+          Sign-up and we'd send the best deals to you
         </span>
         <div
           className="mailing-input-container w-[350px] h-[30px] p-[10px] border-0 
