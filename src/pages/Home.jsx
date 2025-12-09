@@ -13,9 +13,9 @@ const Home = () => {
       <Header />
       <div className="home-container mt-[50px] flex flex-col items-center gap-[30px]">
         <Featured />
-        <h2 className="home-title w-[1024px]">Browse by property type</h2>
+        <h2 className="home-title w-5xl">Browse by property type</h2>
         <PropertyList/>
-        <h2 className="home-title w-[1024px]">Homes guests love</h2>
+        <h2 className="home-title w-5xl">Homes guests love</h2>
         <FeaturedProperties/>
         <MailList/>
         <Footer/>
